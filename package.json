@@ -1,0 +1,12 @@
+{
+  "name": "music-player",
+  "version": "1.0.0",
+  "description": "A professional music player with metadata export",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^25.3.0"
+  }
+}

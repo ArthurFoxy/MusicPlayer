@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.0/lame.min.js"></script>
+</head>
+<body>
+    <div class="player-container">
+        <h1><span class="emoji">🎵</span> Professional Music Player</h1>
+        
+        <div class="cover" id="cover-container">
+            <img id="cover-img" src="" alt="Album Cover">
+        </div>
+
+        <input type="file" id="music-input" accept="audio/*">
+        <label for="music-input" class="custom-button">Import Music <span class="emoji">🎶</span></label>
+
+        <input type="file" id="cover-input" accept="image/*">
+        <label for="cover-input" class="custom-button">Import Cover <span class="emoji">🖼️</span></label>
+
+        <div class="metadata">
+            <input type="text" id="title" placeholder="Title">
+            <input type="text" id="artist" placeholder="Artist">
+            <input type="text" id="album" placeholder="Album">
+            <input type="text" id="year" placeholder="Year">
+            <input type="text" id="genre" placeholder="Genre">
+        </div>
+
+        <audio id="audio-player" controls></audio>
+
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+        
+        <button id="export-btn" class="custom-button">Export <span class="emoji">🎵</span></button>
+        
+        <input type="file" id="metadata-input" accept="application/json">
+        <label for="metadata-input" class="custom-button">Import Metadata <span class="emoji">📂</span></label>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

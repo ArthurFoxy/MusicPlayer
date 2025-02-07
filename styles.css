@@ -1,0 +1,122 @@
+:root {
+    --background: #0b0f19;
+    --primary: #131826;
+    --secondary: #1c2233;
+    --accent: linear-gradient(135deg, #4d5dfb, #8b5cf6);
+    --text: #e3e8ff;
+    --blur: rgba(255, 255, 255, 0.07);
+    --emoji-size: 30px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.player-container {
+    width: 420px;
+    background: var(--primary);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+h1 .emoji {
+    font-size: var(--emoji-size);
+    transition: transform 0.3s ease-in-out;
+}
+
+h1 .emoji:hover {
+    transform: scale(1.2);
+}
+
+.cover {
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    background: var(--blur);
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-button {
+    background: var(--accent);
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 12px 18px;
+    margin: 12px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+}
+
+.custom-button .emoji {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.custom-button:hover {
+    transform: scale(1.05);
+}
+
+.metadata input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 5px;
+    background: var(--secondary);
+    color: var(--text);
+}
+
+audio {
+    width: 100%;
+    margin-top: 18px;
+}
+
+#volume {
+    width: 100%;
+    margin-top: 12px;
+}
+
+footer {
+    margin-top: 24px;
+    font-size: 14px;
+    color: #a0a8cc;
+}
